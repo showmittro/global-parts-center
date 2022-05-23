@@ -14,9 +14,9 @@ const Parts = () => {
     ]
     return (
         <div>
-            <h2 className='text-3xl font-bold'>Our Parts</h2>
-            <p className='text-3xl'>all parts comming soons!!!!!!!</p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <h2 className='text-4xl font-bold mt-3 text-center text-black '>Our Parts</h2>
+            <div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-10'>
 
 
                 {
@@ -25,6 +25,7 @@ const Parts = () => {
                         part={part}
                     ></Part>)
                 }
+            </div>
             </div>
         </div>
     );

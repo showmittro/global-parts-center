@@ -6,9 +6,8 @@ import feedbackIcons from '../../../../images/feedback.png'
 const BusinessSumary = () => {
     return (
         <div className='py-10 px-12'>
-            <h1 class="text-4xl font-bold text-center">This is Business Summary</h1>
-
-            
+            <h1 class="text-4xl font-bold text-center">Millions Business Trust Us</h1>
+            <p className='text-xl py-1 text-teal-400 text-center'>Try To Understand Users Expectation</p>
 
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-10'>
                 <div class="card w-50 bg-base-100 shadow-2xl">

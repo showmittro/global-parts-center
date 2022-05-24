@@ -12,7 +12,7 @@ import lenovo from '../../../images/lenovo-.png'
 const Brands = () => {
     return (
         <div className='py-12 text-center px-10'>
-            <p className='text-3xl font-bold text-sky-400'>Our Best Selling Products</p>
+            <p className='text-3xl py-1 font-bold text-teal-400'>Our Best Selling Products</p>
             <p className='text-1xl'>Best Brands Parts for Laptop & Desktop</p>
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-10'>
                 {/* brand-1  */}

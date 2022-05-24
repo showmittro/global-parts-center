@@ -9,6 +9,7 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import Review from './Pages/Dashboard/Review/Review';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Home/Login/Login';
 import Parts from './Pages/Home/Parts/Parts';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navegation from './Pages/Shared/Navegation/Navegation';
@@ -30,8 +31,8 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
-      <Route path="/login" element={<Parts />} />
       <Footer></Footer>
     </div>
   );

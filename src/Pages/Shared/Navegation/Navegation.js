@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Navegation = () => {
 
   const menuItems = <>
-  <li><Link to="/">Home</Link></li>
+  <li><Link className='font-bold' to="/">Home</Link></li>
   <li><Link to="/parts">Parts</Link></li>
   <li><Link to="/blog">Blog</Link></li>
   <li><Link to="/dashboard">Dashboard</Link></li>
   <li><Link to="/myProfile">My Profile</Link></li>
-  <li><Link to="/login">Login</Link></li>
+  <li><Link className='font-bold'to="/login">Login</Link></li>
 </>
     return (
       <div className="navbar bg-base-100">

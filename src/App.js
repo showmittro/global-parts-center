@@ -11,19 +11,21 @@ import Review from './Pages/Dashboard/Review/Review';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import Parts from './Pages/Home/Parts/Parts';
+import Purchase from './Pages/Purchase/Purchase';
 import Register from './Pages/Register/Register';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navegation from './Pages/Shared/Navegation/Navegation';
 
 function App() {
   return (
     <div>
-       <Navegation></Navegation>
+      <Navegation></Navegation>
       <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/parts" element={<Parts />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="dashboard" element={<Dashboard />} >
+        <Route path="/" element={<Home />} />
+        <Route path="/parts" element={<Parts />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} >
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
@@ -32,6 +34,10 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
         </Route>
+        <Route path='/parts/:serviceId' element={
+          <Purchase></Purchase>
+
+        }></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>

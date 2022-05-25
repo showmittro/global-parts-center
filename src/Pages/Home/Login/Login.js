@@ -70,7 +70,7 @@ const Login = () => {
                             <span class="label-text">Password</span>
                         </label>
                         <input 
-                        type="text"
+                        type="password"
                          placeholder="password"
                           class="input input-bordered"
                           name="password"
@@ -86,7 +86,7 @@ const Login = () => {
                     </form>
                 </div>
 
-                <p><small>New to Global Parts Center <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                <p><small>New to Global Parts Center <Link className='text-primary' to="/register">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                     onClick={handleGoogleSignIn}

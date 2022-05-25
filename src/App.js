@@ -11,6 +11,7 @@ import Review from './Pages/Dashboard/Review/Review';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import Parts from './Pages/Home/Parts/Parts';
+import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navegation from './Pages/Shared/Navegation/Navegation';
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer></Footer>
     </div>

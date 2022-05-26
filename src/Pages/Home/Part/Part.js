@@ -14,7 +14,7 @@ const Part = ({ part }) => {
 
   return (
     <div>
-      <div style={{ height: '500px' }} class="card lg:max-w-lg card-compact w-96 bg-base-100 shadow-xl">
+      <div style={{ height: '500px' }} class="card lg:max-w-lg card-compact w-96 bg-base-100 shadow-2xl">
         <figure><img src={img} alt="Shoes" style={{ height: '200px', width: '80%' }} /></figure>
         <div class="card-body">
           <h2 class="card-title">Part Name: {name}</h2>

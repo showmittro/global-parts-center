@@ -11,6 +11,7 @@ import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import Review from './Pages/Dashboard/Review/Review';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
+import MyPortfolio from './Pages/Home/MyPortfolio/MyPortfolio';
 import Parts from './Pages/Home/Parts/Parts';
 import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/parts" element={<Parts />} />
         <Route path="/blog" element={<Blogs />} />
+        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} >
           <Route index element={<MyOrders></MyOrders>}></Route>

@@ -17,7 +17,7 @@ const Navegation = () => {
         <li><Link className='font-bold' to="/">Home</Link></li>
         <li><Link to="/parts" className='font-bold'>Parts</Link></li>
         <li><Link to="/blog" className='font-bold'>Blog</Link></li>
-        <li><Link className='font-bold' to="/myProfile">My Profile</Link></li>
+        <li><Link className='font-bold' to="/myPortfolio">My Portfolio</Link></li>
         {
 
             user?.email ? <div className='flex font-bold'>

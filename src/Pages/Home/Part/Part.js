@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Part = ({ part }) => {
 
-  const {_id,  name, price, img, AvailableQuantity, MinimumQuantity, des } = part;
+  const { _id, name, price, img, AvailableQuantity, MinimumQuantity, des } = part;
   const navigate = useNavigate();
 
   const navigateToPurchaseDetails = id => {

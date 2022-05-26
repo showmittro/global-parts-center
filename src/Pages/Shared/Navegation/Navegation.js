@@ -23,24 +23,24 @@ const Navegation = () => {
             user?.email ? <div className='flex font-bold'>
                 <li><Link to="/dashboard">Dashboard</Link></li>
                 <div className='my-auto mx-2'>
-                        <span className='text-black'>{user.displayName}</span>
+                    <span className='text-black'>{user.displayName}</span>
 
-                    </div>
-                    <button  className="btn my-auto font-bold btn-primary btn-sm" onClick={handleSignOut}>SingOut</button>
-                    
+                </div>
+                <button className="btn my-auto font-bold btn-primary btn-sm" onClick={handleSignOut}>SingOut</button>
+
 
             </div>
 
 
                 : <div className='my-3'>
                     <Link to="/login" className='text-decoration-none font-bold' ><a>Login</a></Link>
-    
+
                 </div>
 
 
         }
 
-       
+
     </>
     return (
         <div className="navbar bg-base-100">

@@ -11,8 +11,8 @@ const Review = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        
-        fetch('https://obscure-forest-04770.herokuapp.com/reviews', {
+
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -26,27 +26,29 @@ const Review = () => {
                     reset();
                 }
             })
-       
-           
+
+
     }
     return (
         <div>
-           <div>
-            
-            <div className="add-review">
-            <h2 className="text-center">Customer Review</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-            <input  style={{border:'1px solid green'}} className='w-full' defaultValue={user.displayName} {...register("name")}  />
-                <textarea  style={{border:'1px solid green'}} className='w-full' {...register("description")} placeholder="Description" />
-                <input  style={{border:'1px solid green'}} className='w-full' type="number" {...register("rating")} placeholder="rating" />
-                <input  style={{border:'1px solid green'}} className='w-full' {...register("img")} placeholder="image url" />
-                <input  style={{border:'1px solid green'}} className='w-full' type="submit" />
-            </form>
-        </div>
+
+
+            <div className='px-12 py-10'>
+                <h2 className=" font-bold" style={{ color: 'green' }}>Customer Review</h2>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' defaultValue={user.displayName} placeholder='name' {...register("name")} />
+                    <br />
+                    <textarea style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' {...register("description")} placeholder="Description" />
+                    <br />
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' type="number" {...register("rating")} placeholder="rating" />
+                    <br />
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' {...register("img")} placeholder="image url" /> <br />
+
+                    <input style={{ border: '1px solid green', background: 'green', color: '#ffff' }} className='w-96 mt-3 rounded font-bold' type="submit" />
+                </form>
+            </div>
         </div>
 
-            
-        </div>
     );
 };
 

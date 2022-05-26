@@ -36,7 +36,7 @@ const Purchase = () => {
           }
           </h2>
           <div>
-          <p>{parts.des}</p>
+            <p>{parts.des}</p>
           </div>
           <div class="card-actions">
             <button class="btn btn-primary">Buy Now</button>

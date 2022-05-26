@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blogs from './Pages/Blogs/Blogs';
 import AddProduct from './Pages/Dashboard/AddProduct/AddProduct';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/parts" element={<Parts />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} >
           <Route index element={<MyOrders></MyOrders>}></Route>

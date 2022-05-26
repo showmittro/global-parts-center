@@ -40,7 +40,11 @@ const Review = () => {
                     <br />
                     <textarea style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' {...register("description")} placeholder="Description" />
                     <br />
-                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' type="number" {...register("rating")} placeholder="rating" />
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' type="number" {...register("price")} placeholder="price" />
+                    <br />
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' type="number" {...register("AvailableQuantity")} placeholder="AvailableQuantity" />
+                    <br />
+                    <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' type="number" {...register("AvailableQuantity")} placeholder="AvailableQuantity" />
                     <br />
                     <input style={{ border: '1px solid green' }} className='w-96 mt-3 rounded' {...register("img")} placeholder="image url" /> <br />
 

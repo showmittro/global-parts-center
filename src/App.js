@@ -12,6 +12,7 @@ import Review from './Pages/Dashboard/Review/Review';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Home/Login/Login';
 import Parts from './Pages/Home/Parts/Parts';
+import NotFound from './Pages/NotFound/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
 import Register from './Pages/Register/Register';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
@@ -42,6 +43,7 @@ function App() {
         }></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
     </div>

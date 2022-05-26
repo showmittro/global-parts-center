@@ -8,7 +8,7 @@ const Purchase = () => {
 
 
   useEffect(() => {
-    const url = `http://localhost:5000/parts/${serviceId}`;
+    const url = `https://powerful-inlet-95436.herokuapp.com/parts/${serviceId}`;
     console.log(url);
     fetch(url)
       .then(res => res.json())

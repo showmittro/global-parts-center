@@ -6,7 +6,7 @@ const ManageProduct = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/parts')
+        fetch('https://powerful-inlet-95436.herokuapp.com/parts')
             .then(res => res.json())
             .then(data => setStock(data));
 
@@ -18,7 +18,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/parts/${id}`;
+            const url = `https://powerful-inlet-95436.herokuapp.com/parts/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

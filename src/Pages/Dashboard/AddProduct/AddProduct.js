@@ -11,7 +11,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        fetch('http://localhost:5000/parts', {
+        fetch('https://powerful-inlet-95436.herokuapp.com/parts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

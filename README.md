@@ -1,10 +1,10 @@
 # Project Name: Global Parts Center.
 
-### client site code link:
+### client side code link: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-showmittro
 
-### server site code link:
+### server side code link: https://github.com/programming-hero-web-course1/manufacturer-website-server-side-showmittro
 
-### live site link: 
+### live site link: https://global-parts-center.web.app
 
 
 # FontEnd Used Technology:-
@@ -18,14 +18,12 @@
 - MongoDb
 - NodeJs
 - ExpressJs
-- axios
 - Heroku
 - Project Features
 - Firebase Two Authentication used(google, email password)
-- Update button clicked open the product details page (private)
-- Delete Button clicked delete the product
 - Add Button clicked Add a New product
 - 404 handling
+
 
 # Total 13 section developed this project:-
 
@@ -35,9 +33,7 @@
 - Blog
 - Contact Us
 - Brand
-- Manage Inventories
 - Add Item
-- My Item
 - Log in
 - Register
 - 404

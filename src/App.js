@@ -39,10 +39,14 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
         </Route>
+        
         <Route path='/parts/:serviceId' element={
+          <RequireAuth>
           <Purchase></Purchase>
+          </RequireAuth>
 
         }></Route>
+    
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />

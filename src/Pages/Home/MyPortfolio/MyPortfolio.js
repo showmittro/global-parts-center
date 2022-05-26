@@ -38,19 +38,19 @@ const MyPortfolio = () => {
                         <h1 class="text-2xl font-bold">My Best Three Project Link</h1>
                         <div>
                             <h1 className='text-1xl font-bold'>Project 1</h1>
-                            <h1>LiveSiteLink: </h1>
+                            <h1>LiveSiteLink:https://global-parts-center.web.app </h1>
 
 
                         </div>
                         <div>
                             <h1 className='text-1xl font-bold'>Project 2</h1>
-                            <h1>LiveSiteLink: </h1>
+                            <h1>LiveSiteLink: https://biycle-inventory.web.app/ </h1>
 
 
                         </div>
                         <div>
                             <h1 className='text-1xl font-bold'>Project 3</h1>
-                            <h1>LiveSiteLink: </h1>
+                            <h1>LiveSiteLink: https://my-shoes-shop.netlify.app/ </h1>
 
 
                         </div>

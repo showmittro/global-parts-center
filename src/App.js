@@ -32,21 +32,21 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} >
           <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path="review" element={<Review></Review>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="review" element={<Review></Review>}></Route>
           <Route path="manageOrders" element={<ManageOrders></ManageOrders>}></Route>
           <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
           <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path="manageProduct" element={<ManageProduct></ManageProduct>}></Route>
         </Route>
-        
+
         <Route path='/parts/:serviceId' element={
           <RequireAuth>
-          <Purchase></Purchase>
+            <Purchase></Purchase>
           </RequireAuth>
 
         }></Route>
-    
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />

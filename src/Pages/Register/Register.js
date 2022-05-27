@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import GoogleIcons from '../../images/google.png'
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -12,6 +14,9 @@ const Register = () => {
     const navigate = useNavigate();
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const [signInWithGoogle,gUser] = useSignInWithGoogle(auth);
+
+    const [token]  = useToken(user || gUser);
 
     const handleNameBlur = event => {
         setName(event.target.value);
@@ -28,12 +33,13 @@ const Register = () => {
         setConfirmPassword(event.target.value);
     }
 
-    if (user) {
+    if (user || gUser) {
         navigate('/');
     }
 
     const handleCreateUser = event => {
         event.preventDefault();
+
         if (password !== confirmPassword) {
             setError('Your two passwords did not match');
             return;
@@ -45,9 +51,16 @@ const Register = () => {
 
         createUserWithEmailAndPassword(email, password);
     }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(() => {
+               
+            })
+    }
     return (
         <div>
-            <h1 className='text-center text-3xl font-bold py-12'>Please Login</h1>
+            <h1 className='text-center text-3xl font-bold py-12'>Please Register</h1>
 
             <div class="card  w-full flex items-center justify-items-center bg-base-100">
                 <div class="card-body">
@@ -118,6 +131,13 @@ const Register = () => {
                 </div>
 
                 <p><small>Already Have an account? <Link className='text-primary' to="/login">LogIn</Link></small></p>
+                <div className="divider">OR</div>
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="btn btn-primary text-black font bold"
+                >
+                    <img src={GoogleIcons} style={{ height: '40px', width: '40px' }} alt="" />
+                    Continue with Google</button>
 
 
             </div>

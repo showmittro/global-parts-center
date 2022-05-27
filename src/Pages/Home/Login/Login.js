@@ -43,7 +43,7 @@ const Login = () => {
     const handleUserSignIn = event => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password);
-        console.log(signInWithEmailAndPassword)
+      
     }
 
     return (

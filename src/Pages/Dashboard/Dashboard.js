@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { set } from 'react-hook-form';
 import { Link, Outlet } from 'react-router-dom';
+import auth from '../../firebase.init';
+
+
+
 
 const Dashboard = () => {
+
+    const [user] = useAuthState(auth)
+
+    const [admin, setAdmin] = useState(false);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/user/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin));
+
+
+    }, [user])
+
+
+
+
+
+
+
     return (
         <div class="drawer drawer-mobile">
             <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
@@ -16,10 +41,15 @@ const Dashboard = () => {
                     <li><Link to="/dashboard/profile">My Profile</Link></li>
                     <li><Link to="/dashboard">My Orders</Link></li>
                     <li><Link to="/dashboard/review">Add A Review</Link></li>
-                    <li><Link to="/dashboard/manageOrders">Manage Orders</Link></li>
-                    <li><Link to="/dashboard/addProduct">Add A Product</Link></li>
-                    <li><Link to="/dashboard/makeAdmin">Make Admin</Link></li>
-                    <li><Link to="/dashboard/manageProduct">Manage Products</Link></li>
+                    {admin && <>
+                        <li><Link to="/dashboard/manageOrders">Manage Orders</Link></li>
+                        <li><Link to="/dashboard/addProduct">Add A Product</Link></li>
+                        <li><Link to="/dashboard/makeAdmin">Make Admin</Link></li>
+                        <li><Link to="/dashboard/manageProduct">Manage Products</Link></li>
+
+                    </>
+
+                    }
                 </ul>
 
             </div>
